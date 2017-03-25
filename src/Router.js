@@ -6,8 +6,6 @@ import Register from 'components/user/Register';
 import ChangePassword from 'components/user/ChangePassword';
 import Invites from 'components/invites'
 import myFeedback from 'components/myFeedback';
-import Invites from 'components/invites';
-
 
 const FeedbackRouter = ({ history }) => {
   return (

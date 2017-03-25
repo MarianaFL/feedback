@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 
 class Invites extends React.Component {
   render() {
-  	
+
   	const styles = {
   		color:'black'
   	};

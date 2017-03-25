@@ -2,7 +2,6 @@ import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import { authDispatchers } from 'api/actions';
-import { Route, Link } from 'react-router';
 import Invites from 'components/invites'
 
 
@@ -17,6 +16,7 @@ class Toolbar extends React.Component {
 
         <section className="mdc-toolbar__section">
           <Link to="/invites">Invites</Link>
+
         </section>
 
         <section className="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
