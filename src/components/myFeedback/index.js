@@ -1,17 +1,17 @@
 import React, { PropTypes } from 'react'
 
-class Invites extends React.Component {
+class MyFeedback extends React.Component {
   render() {
-  	
+
   	const styles = {
-  		color:'black'
+  		color:'black',
+  		textAlign: 'center'
   	};
+
     return (
       <div>
-      	<h1>
-      		<center>
-      			Invites
-      	    </center>
+      	<h1 style={styles}>
+  			Feedback
       	</h1>
 		<body className="mdc-theme--dark">
 		  <div className="mdc-card">
@@ -32,7 +32,7 @@ class Invites extends React.Component {
 		<body className="mdc-theme--dark">
 		  <div className="mdc-card">
 		    <section className="mdc-card__primary">
-			      <h1 className="mdc-card__title mdc-card__title--large" style={styles}>Preciso que vocês me avaliem.</h1>
+			      <h1 className="mdc-card__title mdc-card__title--large" style={styles}>Preciso que	 vocês me avaliem.</h1>
 			      <h2 className="mdc-card__subtitle" style={styles}>25/03/2017</h2>
 		    </section>
 		  </div>
@@ -42,4 +42,4 @@ class Invites extends React.Component {
   }
 }
 
-export default Invites;
+export default MyFeedback;

@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { createStore, combineReducers, applyMiddleware } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import { browserHistory, IndexRedirect, Router, Route } from 'react-router';
 import { syncHistoryWithStore, routerReducer, routerMiddleware } from 'react-router-redux';
@@ -13,11 +12,11 @@ import sagas from 'api/sagas';
 import FeedbackRouter from 'Router';
 
 const config = {
-  apiKey: "AIzaSyDGYMxpnYaAJYyquEUM6Y__yQjhPP_skx0",
-  authDomain: "feedback-140018.firebaseapp.com",
-  databaseURL: "https://feedback-140018.firebaseio.com",
-  storageBucket: "feedback-140018.appspot.com",
-  messagingSenderId: "71457068040"
+  apiKey: "AIzaSyDQKQUn_0zS8KOPhUxMAjax8J0y1mUTBRs",
+  authDomain: "react-course-project-744a5.firebaseapp.com",
+  databaseURL: "https://react-course-project-744a5.firebaseio.com",
+  storageBucket: "react-course-project-744a5.appspot.com",
+  messagingSenderId: "678636752247"
 };
 firebase.initializeApp(config);
 window.firebase = firebase;
@@ -40,8 +39,7 @@ class App extends Component {
       routing: routerReducer,
       ...apiReducers
     });
-    const composeEnhancers = composeWithDevTools({});
-    this.store = createStore(reducers, composeEnhancers(applyMiddleware(...middlewares)));
+    this.store = createStore(reducers, compose(applyMiddleware(...middlewares)));
     this.history = syncHistoryWithStore(browserHistory, this.store);
 
     sagaMiddleware.run(sagas);
@@ -67,7 +65,7 @@ class App extends Component {
 
     return (
       <Provider store={this.store}>
-        <FeedbackRouter history={this.history} validate={validate} />
+        <FeedbackRouter history={this.history} />
       </Provider>
     );
   }
