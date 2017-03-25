@@ -6,7 +6,7 @@ export default (store) => {
     return (action) => {
 
       if (action.type === actions.user.logged) {
-        store.dispatch(push('/profile'));
+        store.dispatch(push('/myfeedback'));
       }
 
       if (action.type === actions.user.login) {        
@@ -17,7 +17,7 @@ export default (store) => {
           .auth()
           .signInWithEmailAndPassword(email, password)
           .then(payload => {
-            const action = push('/profile');
+            const action = push('/myfeedback');
             action.meta = payload;
             store.dispatch(action);
             //store.dispatch({ type: actions.user.logged, payload });

@@ -1,6 +1,9 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { authDispatchers } from 'api/actions';
+import { Route, Link } from 'react-router';
+import Invites from 'components/invites'
+
 
 class Toolbar extends React.Component {
   render() {
@@ -10,8 +13,14 @@ class Toolbar extends React.Component {
           <a className="material-icons">menu</a>
           <span className="mdc-toolbar__title">Feedback</span>
         </section>
+
+        <section className="mdc-toolbar__section">
+          <Link to="/invites">Invites</Link>
+         
+        </section>
+
         <section className="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
-          <button onClick={this.props.logout}><i className="material-icons">exit_to_app</i></button>
+          <button ><i className="material-icons">exit_to_app</i></button>
         </section>
       </header>
     );

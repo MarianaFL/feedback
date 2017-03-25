@@ -4,20 +4,23 @@ import Base from 'components/Base';
 import Login from 'components/user/Login';
 import Register from 'components/user/Register';
 import ChangePassword from 'components/user/ChangePassword';
+import Invites from 'components/invites'
+import myFeedback from 'components/myFeedback';
 
-import Profile from 'components/profile';
-
-const FeedbackRouter = ({ history, validate }) => {
+const FeedbackRouter = ({ history }) => {
 
   return (
     <Router history={history}>
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
       <Route path="/change_password" component={ChangePassword} />
-      <Route path="/" component={Base} onEnter={validate}>
-        <IndexRedirect to="/profile" />
-        <Route path="/profile" component={Profile} />
+      <Route path="/" component={Base}>
+        <IndexRedirect to="/myfeedback" />
+        <Route path="/myfeedback" component={myFeedback} />
+        <Route path="/invites" component={Invites} />
       </Route>
+
+
     </Router>
   )
 }
