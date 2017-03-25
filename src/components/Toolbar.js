@@ -2,8 +2,6 @@ import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import { authDispatchers } from 'api/actions';
-import Invites from 'components/invites'
-
 
 class Toolbar extends React.Component {
   render() {
@@ -14,9 +12,13 @@ class Toolbar extends React.Component {
           <span className="mdc-toolbar__title">Feedback</span>
         </section>
 
+
+        <section className="mdc-toolbar__section">
+          <Link to="/myfeedback">My Feedback</Link>
+        </section>
+
         <section className="mdc-toolbar__section">
           <Link to="/invites">Invites</Link>
-
         </section>
 
         <section className="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">

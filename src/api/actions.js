@@ -36,6 +36,10 @@ export const authDispatchers = (dispatch) => ({
   onChange: payload => ( dispatch({ type: user.updateForm, payload }) )
 });
 
+export const feedbackDispatchers = (dispatch) => ({
+  
+});
+
 export default {
   user,
 }
