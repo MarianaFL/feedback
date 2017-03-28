@@ -72,8 +72,8 @@ const initialState = fromJS({
   feedbacks: {
     1239987365: {
       description: 'Preciso que vocês me avaliem.',
-      surveyDate: new Date(),
-      ratingDate: new Date(),
+      surveyDate: '04/03/2017',
+      ratingDate: '25/03/2017',
       owner: {
         photoUrl: '',
         email: 'cmilfont@gmail.com',
@@ -151,8 +151,8 @@ const initialState = fromJS({
     },
     332444224: {
       description: 'Preciso que vocês me avaliem.',
-      surveyDate: new Date(),
-      ratingDate: new Date(),
+      surveyDate: '04/03/2017',
+      ratingDate: '5/03/2017',
       owner: {
         photoUrl: '',
         email: 'cmilfont@gmail.com',
