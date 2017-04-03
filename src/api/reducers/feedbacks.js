@@ -1,11 +1,12 @@
 import { fromJS } from 'immutable';
 
 const initialState = fromJS({
+  test: 'oi',
   invites: {
     7762355623: {
       negatives: {
         123218377: {
-          description: 'Precisa melhorar o o foco.'
+          description: 'Precisa melhorar o foco.'
         },
         123218378: {
           description: 'se imponha rapaz.'
@@ -156,6 +157,16 @@ const initialState = fromJS({
       owner: {
         photoUrl: '',
         email: 'cmilfont@gmail.com',
+      },
+    },
+
+  6345676435: {
+      description: 'Ola mundo',
+      surveyDate: '31/03/2017',
+      ratingDate: '30/04/2017',
+      owner: {
+        photoUrl: '',
+        email: 'teste@gmail.com',
       },
     },
   }

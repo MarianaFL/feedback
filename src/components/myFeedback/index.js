@@ -8,15 +8,17 @@ class MyFeedback extends React.Component {
   	const { myfeedback } = this.props
     const listFeedbacks = myfeedback.getIn(['feedbacks']).toJS();
 
-   let containerFeedback = []
+   const containerFeedback = []
     for (let object in listFeedbacks){
-      containerFeedback.push(<Card description={listFeedbacks[object]['description']} surveyDate={listFeedbacks[object]['surveyDate']} />);
+      if (listFeedbacks[object]['owner']['email'] == "cmilfont@gmail.com")
+        containerFeedback.push(<Card description={listFeedbacks[object]['description']} surveyDate={listFeedbacks[object]['surveyDate']} />);
     }
      return (
        <div>
          <h1 >
            Feedback
          </h1>
+         Welcome user!
          {containerFeedback}
        </div>
     );
